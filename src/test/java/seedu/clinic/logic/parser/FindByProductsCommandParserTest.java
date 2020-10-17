@@ -15,7 +15,7 @@ import seedu.clinic.model.warehouse.WarehouseProductsContainKeywordsPredicate;
 /**
  * Tests if {@code FindByProductsCommand} parses the arguments correctly for {@code Supplier} and {@code Warehouse}.
  */
-public class FindCommandParserTest {
+public class FindByProductsCommandParserTest {
 
     private FindByProductsCommandParser parser = new FindByProductsCommandParser();
 
