@@ -21,7 +21,7 @@ public class FindByProductsCommand extends Command {
     public static final String COMMAND_WORD = "findp";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all suppliers/warehouses that sell/hold products"
-            + "matching the specified keywords (case-insensitive) and displays them as a list with index numbers.\n"
+            + " matching the specified keywords (case-insensitive) and displays them as a list with index numbers.\n"
             + "Parameters: TYPE KEYWORD [MORE_KEYWORDS]...\n"
             + "Example: " + COMMAND_WORD + " supplier panadol\n"
             + "Example: " + COMMAND_WORD + " warehouse face mask";
