@@ -119,14 +119,14 @@ public class HelpCommandTest {
 
     @Test
     public void execute_findHelp_success() {
-        String findProductsInSupplierOrWarehouse = "Find\nFinds all suppliers or warehouses managed by the manager"
+        String findProductsInSupplierOrWarehouse = "Find by products\nFinds all suppliers or warehouses managed by the manager"
                 + " that sells the relevant medical products.";
-        String findProductsInSupplierOrWarehouseCommandFormat = "Command format: \nfind TYPE KEYWORD"
+        String findProductsInSupplierOrWarehouseCommandFormat = "Command format: \nfindp TYPE KEYWORD"
                 + "[KEYWORD]...\n\n"
                 + "KEYWORD specified is case-insensitive and must contain at least one keyword.\n"
                 + "The TYPE specified should be one of these values: warehouse / supplier.";
         String findProductsInSupplierOrWarehouseSampleCommand = "Sample Command: \n"
-                + "find warehouse PANADOL SUSP \nfind supplier masks";
+                + "findp warehouse PANADOL SUSP \nfindp supplier masks";
         String findHelpMessage = HELP_MESSAGE_FOR_COMMAND_FORMAT + "\n\n"
                 + findProductsInSupplierOrWarehouse + "\n\n"
                 + findProductsInSupplierOrWarehouseCommandFormat + "\n\n"
