@@ -29,8 +29,7 @@ public class HelpCommandTest {
         String aboutDeleteCommand = "delete\nYou can delete warehouse or supplier that are no longer"
                 + " needed by using the delete command.";
         String aboutExitCommand = "exit\nYou can exit the application using the exit command.";
-        String aboutFindCommand = "find\nYou can find suppliers or warehouses that sells the products using"
-                + " the find command.";
+        String aboutFindCommand = "find\nYou can find suppliers or warehouses using the find command.";
         String aboutListCommand = "list\nYou can list all suppliers and warehouses by using list command.";
         String aboutViewCommand = "view\nYou can view a specific warehouse or supplier using"
                 + " the view command.";
@@ -119,18 +118,34 @@ public class HelpCommandTest {
 
     @Test
     public void execute_findHelp_success() {
-        String findProductsInSupplierOrWarehouse = "Find by products\nFinds all suppliers or warehouses managed by the"
-                + " manager that sells the relevant medical products.";
-        String findProductsInSupplierOrWarehouseCommandFormat = "Command format: \nfindp TYPE KEYWORD"
+        String generalDescriptionOfFind = "There are two types of find command."
+                + " Finding suppliers/warehouses by name and finding by products sold/stored";
+
+        String findSuppliersOrWarehousesByName = "Find suppliers/warehouses by name.";
+        String findSuppliersOrWarehousesByNameCommandFormat = "Command format: \nfindn TYPE KEYWORD"
                 + "[KEYWORD]...\n\n"
                 + "KEYWORD specified is case-insensitive and must contain at least one keyword.\n"
                 + "The TYPE specified should be one of these values: warehouse / supplier.";
-        String findProductsInSupplierOrWarehouseSampleCommand = "Sample Command: \n"
+        String findSuppliersOrWarehousesByNameSampleCommand = "Sample Command: \n"
+                + "findn warehouse alex \nfindn supplier bernice amanda";
+
+        String findSuppliersOrWarehousesByProducts = "Finds all suppliers or warehouses "
+                + " that sells/stores the relevant medical products.";
+        String findSuppliersOrWarehousesByProductsCommandFormat = "Command format: \nfindp TYPE KEYWORD"
+                + "[KEYWORD]...\n\n"
+                + "KEYWORD specified is case-insensitive and must contain at least one keyword.\n"
+                + "The TYPE specified should be one of these values: warehouse / supplier.";
+        String findSuppliersOrWarehousesByProductsSampleCommand = "Sample Command: \n"
                 + "findp warehouse PANADOL SUSP \nfindp supplier masks";
         String findHelpMessage = HELP_MESSAGE_FOR_COMMAND_FORMAT + "\n\n"
-                + findProductsInSupplierOrWarehouse + "\n\n"
-                + findProductsInSupplierOrWarehouseCommandFormat + "\n\n"
-                + findProductsInSupplierOrWarehouseSampleCommand + "\n\n" + HELP_MESSAGE_FOR_USER_GUIDE;
+                + generalDescriptionOfFind + "\n\n"
+                + findSuppliersOrWarehousesByName + "\n\n"
+                + findSuppliersOrWarehousesByNameCommandFormat + "\n\n"
+                + findSuppliersOrWarehousesByNameSampleCommand + "\n\n"
+                + findSuppliersOrWarehousesByProducts + "\n\n"
+                + findSuppliersOrWarehousesByProductsCommandFormat + "\n\n"
+                + findSuppliersOrWarehousesByProductsSampleCommand + "\n\n" + HELP_MESSAGE_FOR_USER_GUIDE;
+
         CommandResult expectedCommandResult = new CommandResult(findHelpMessage, false, false);
         assertCommandSuccess(new HelpCommand("find"), model,
                 expectedCommandResult, expectedModel);
