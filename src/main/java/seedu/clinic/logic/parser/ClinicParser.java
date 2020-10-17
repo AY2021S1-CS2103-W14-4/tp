@@ -13,7 +13,7 @@ import seedu.clinic.logic.commands.Command;
 import seedu.clinic.logic.commands.DeleteCommand;
 import seedu.clinic.logic.commands.EditCommand;
 import seedu.clinic.logic.commands.ExitCommand;
-import seedu.clinic.logic.commands.FindCommand;
+import seedu.clinic.logic.commands.FindByProductsCommand;
 import seedu.clinic.logic.commands.HelpCommand;
 import seedu.clinic.logic.commands.ListCommand;
 import seedu.clinic.logic.commands.UpdateCommand;
@@ -62,8 +62,8 @@ public class ClinicParser {
         case ClearCommand.COMMAND_WORD:
             return new ClearCommand();
 
-        case FindCommand.COMMAND_WORD:
-            return new FindCommandParser().parse(arguments);
+        case FindByProductsCommand.COMMAND_WORD:
+            return new FindByProductsCommandParser().parse(arguments);
 
         case ListCommand.COMMAND_WORD:
             return new ListCommand();
