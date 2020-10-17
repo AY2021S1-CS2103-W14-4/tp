@@ -164,8 +164,8 @@ public class HelpCommand extends Command {
     }
 
     private String generateHelpFindMessage() {
-        String findProductsInSupplierOrWarehouse = "Find by products\nFinds all suppliers or warehouses managed by the manager"
-                + " that sells the relevant medical products.";
+        String findProductsInSupplierOrWarehouse = "Find by products\nFinds all suppliers or warehouses managed by the"
+                + " manager that sells the relevant medical products.";
         String findProductsInSupplierOrWarehouseCommandFormat = "Command format: \nfindp TYPE KEYWORD"
                 + "[KEYWORD]...\n\n"
                 + "KEYWORD specified is case-insensitive and must contain at least one keyword.\n"
