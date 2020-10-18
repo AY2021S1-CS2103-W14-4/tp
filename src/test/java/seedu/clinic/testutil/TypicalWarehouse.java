@@ -43,12 +43,12 @@ public class TypicalWarehouse {
             .withPhone("94351233")
             .withProducts(Map.of("Panadol", 1)).build();
     public static final Warehouse ELLE = new WarehouseBuilder().withName("Warehouse Elle")
-            .withRemark("Warehouse 5").withAddress("elle address")
+            .withRemark("Warehouse 5, one of the biggest").withAddress("elle address")
             .withPhone("94651253")
             .withProducts(Map.of("Cough Syrup", 30))
             .withProducts(Map.of("Medical Glove", 50)).build();
     public static final Warehouse FIONA = new WarehouseBuilder().withName("Warehouse Fiona")
-            .withRemark("Warehouse 10").withAddress("fiona address")
+            .withRemark("Warehouse 10, one of the biggest").withAddress("fiona address")
             .withPhone("92351253")
             .withProducts(Map.of("Flu Syrup", 1000))
             .withProducts(Map.of("Medical Glove", 50))

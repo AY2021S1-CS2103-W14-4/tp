@@ -41,7 +41,7 @@
     "name" : "Warehouse Elle",
     "phone" : "94651253",
     "address" : "elle address",
-    "remark" : "Warehouse 5",
+    "remark" : "Warehouse 5, one of the biggest",
     "products" : [ {
       "name": "Cough Syrup",
       "quantity": 30
@@ -53,7 +53,7 @@
     "name" : "Warehouse Fiona",
     "phone" : "92351253",
     "address" : "fiona address",
-    "remark" : "Warehouse 10",
+    "remark" : "Warehouse 10, one of the biggest",
     "products" : [ {
       "name": "Flu Syrup",
       "quantity": 1000

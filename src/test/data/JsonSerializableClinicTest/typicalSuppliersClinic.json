@@ -55,7 +55,7 @@
     "name" : "Fiona Kunz Ltd",
     "phone" : "9482427",
     "email" : "lydia@example.com",
-    "remark" : "specialises in antibiotics",
+    "remark" : "specialises in antibiotics, industry leader",
     "products" : [{
       "name": "Mask",
       "tagged": ["black"]

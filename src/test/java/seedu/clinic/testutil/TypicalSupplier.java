@@ -47,7 +47,7 @@ public class TypicalSupplier {
             .withProducts(Map.of("Mask", new String[]{"black"}))
             .withProducts(Map.of("Medical Glove", new String[]{"rubber"})).build();
     public static final Supplier FIONA = new SupplierBuilder().withName("Fiona Kunz Ltd").withPhone("9482427")
-            .withEmail("lydia@example.com").withRemark("specialises in antibiotics")
+            .withEmail("lydia@example.com").withRemark("specialises in antibiotics, industry leader")
             .withProducts(Map.of("Mask", new String[]{"black"}))
             .withProducts(Map.of("Needle", new String[]{"1mm"}))
             .withProducts(Map.of("Cough Syrup", new String[]{"cough"})).build();
