@@ -118,8 +118,8 @@ public class HelpCommandTest {
 
     @Test
     public void execute_findHelp_success() {
-        String generalDescriptionOfFind = "There are two types of find command."
-                + " Finding suppliers/warehouses by name and finding by products sold/stored";
+        String generalDescriptionOfFind = "There are three types of find command."
+                + " Finding suppliers/warehouses by name, finding by products sold/stored and finding by remarks";
 
         String findSuppliersOrWarehousesByName = "Find suppliers/warehouses by name.";
         String findSuppliersOrWarehousesByNameCommandFormat = "Command format: \nfindn TYPE KEYWORD"
@@ -137,6 +137,15 @@ public class HelpCommandTest {
                 + "The TYPE specified should be one of these values: warehouse / supplier.";
         String findSuppliersOrWarehousesByProductsSampleCommand = "Sample Command: \n"
                 + "findp warehouse PANADOL SUSP \nfindp supplier masks";
+
+        String findSuppliersOrWarehousesByRemark = "Find suppliers/warehouses by remark.";
+        String findSuppliersOrWarehousesByRemarkCommandFormat = "Command format: \nfindr TYPE KEYWORD"
+                + "[KEYWORD]...\n\n"
+                + "KEYWORD specified is case-insensitive and must contain at least one keyword.\n"
+                + "The TYPE specified should be one of these values: warehouse / supplier.";
+        String findSuppliersOrWarehousesByRemarkSampleCommand = "Sample Command: \n"
+                + "findr warehouse biggest \nfindr supplier cheap and fast";
+
         String findHelpMessage = HELP_MESSAGE_FOR_COMMAND_FORMAT + "\n\n"
                 + generalDescriptionOfFind + "\n\n"
                 + findSuppliersOrWarehousesByName + "\n\n"
@@ -144,7 +153,11 @@ public class HelpCommandTest {
                 + findSuppliersOrWarehousesByNameSampleCommand + "\n\n"
                 + findSuppliersOrWarehousesByProducts + "\n\n"
                 + findSuppliersOrWarehousesByProductsCommandFormat + "\n\n"
-                + findSuppliersOrWarehousesByProductsSampleCommand + "\n\n" + HELP_MESSAGE_FOR_USER_GUIDE;
+                + findSuppliersOrWarehousesByProductsSampleCommand + "\n\n"
+                + findSuppliersOrWarehousesByRemark + "\n\n"
+                + findSuppliersOrWarehousesByRemarkCommandFormat + "\n\n"
+                + findSuppliersOrWarehousesByRemarkSampleCommand + "\n\n"
+                + HELP_MESSAGE_FOR_USER_GUIDE;
 
         CommandResult expectedCommandResult = new CommandResult(findHelpMessage, false, false);
         assertCommandSuccess(new HelpCommand("find"), model,
