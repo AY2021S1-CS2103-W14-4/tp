@@ -124,6 +124,7 @@ public class FindByNamesTest {
      */
     private NameContainsKeywordsPredicateForWarehouse prepareWarehousePredicate(String userInput) {
         String[] nameKeywords = userInput.split("\\s+");
-        return new NameContainsKeywordsPredicateForWarehouse(Arrays.asList(nameKeywords).subList(1, nameKeywords.length));
+        return new NameContainsKeywordsPredicateForWarehouse(Arrays.asList(nameKeywords).subList(1,
+                nameKeywords.length));
     }
 }
