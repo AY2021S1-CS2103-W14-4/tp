@@ -15,6 +15,7 @@ import seedu.clinic.logic.commands.EditCommand;
 import seedu.clinic.logic.commands.ExitCommand;
 import seedu.clinic.logic.commands.FindByNamesCommand;
 import seedu.clinic.logic.commands.FindByProductsCommand;
+import seedu.clinic.logic.commands.FindByRemarksCommand;
 import seedu.clinic.logic.commands.HelpCommand;
 import seedu.clinic.logic.commands.ListCommand;
 import seedu.clinic.logic.commands.UpdateCommand;
@@ -68,6 +69,9 @@ public class ClinicParser {
 
         case FindByProductsCommand.COMMAND_WORD:
             return new FindByProductsCommandParser().parse(arguments);
+
+        case FindByRemarksCommand.COMMAND_WORD:
+            return new FindByRemarksCommandParser().parse(arguments);
 
         case ListCommand.COMMAND_WORD:
             return new ListCommand();
