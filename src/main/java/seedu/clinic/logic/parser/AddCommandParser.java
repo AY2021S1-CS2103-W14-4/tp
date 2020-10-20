@@ -45,6 +45,8 @@ public class AddCommandParser implements Parser<AddCommand> {
             ArgumentMultimap argMultimap =
                     ArgumentTokenizer.tokenize(args, PREFIX_SUPPLIER_NAME, PREFIX_PHONE, PREFIX_EMAIL,
                             PREFIX_REMARK);
+            assert argMultimap.getValue(PREFIX_EMAIL).isPresent() : "The email prefix "
+                    + " is not found.";
 
             if (!arePrefixesPresent(argMultimap, PREFIX_SUPPLIER_NAME, PREFIX_PHONE, PREFIX_EMAIL)
                     || !argMultimap.getPreamble().isEmpty()) {
@@ -65,6 +67,8 @@ public class AddCommandParser implements Parser<AddCommand> {
             ArgumentMultimap argMultimap =
                     ArgumentTokenizer.tokenize(args, PREFIX_WAREHOUSE_NAME, PREFIX_PHONE, PREFIX_ADDRESS,
                             PREFIX_REMARK);
+            assert argMultimap.getValue(PREFIX_ADDRESS).isPresent() : "The address prefix "
+                    + " is not found.";
 
             if (!arePrefixesPresent(argMultimap, PREFIX_WAREHOUSE_NAME, PREFIX_PHONE, PREFIX_ADDRESS)
                     || !argMultimap.getPreamble().isEmpty()) {
